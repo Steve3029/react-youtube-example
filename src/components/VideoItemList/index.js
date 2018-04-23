@@ -1,9 +1,11 @@
 import React from 'react'
 
-const VideoItemList = () => {
+const VideoItemList = (props) => {
     return (
-        <ul>
-            <li></li>
+        <ul className="col-md-4 list-group">
+          {props.videos.length}
         </ul>
     )
 }
+
+export default VideoItemList
