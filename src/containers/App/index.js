@@ -1,8 +1,19 @@
 import React from 'react'
+import YTSearch from 'youtube-api-search'
+
+import SearchBar from '../../components/SearchBar'
+
+const API_KEY = 'AIzaSyDO3RA5fGGI-781qhBqtW4xeq8Sy0AM8GQ'
+
+YTSearch({key: API_KEY, term: 'surfboards'}, data => {
+  console.log(data)
+})
 
 const App = () => {
-    return (
-        <h1>Welcom to React World!</h1>
+  return (
+    <div>
+      <SearchBar />
+    </div>
     )
 }
 

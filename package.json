@@ -35,7 +35,8 @@
     "react-router-dom": "^4.2.2",
     "redux": "^4.0.0",
     "redux-form": "^7.3.0",
-    "redux-saga": "^0.16.0"
+    "redux-saga": "^0.16.0",
+    "youtube-api-search": "0.0.5"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
