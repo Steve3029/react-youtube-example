@@ -1,5 +1,5 @@
 const path = require('path')
-const LiveReloadPlugin = require('webpack-livereload-plugin')
+// const LiveReloadPlugin = require('webpack-livereload-plugin')
 
 
 module.exports = {
@@ -11,9 +11,9 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'public')
   },
-  plugins: [
-    new LiveReloadPlugin()
-  ],
+  // plugins: [
+  //   new LiveReloadPlugin()
+  // ],
   module: {
     rules: [
       {
