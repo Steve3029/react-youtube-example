@@ -6,7 +6,7 @@ const VideoItemList = (props) => {
         return <VideoItem onSelect={props.onVideoSelect} key={video.etag} video={video} />
     })
     return (
-        <ul className="col-md-auto list-group">
+        <ul className="col-md-4 list-group">
           {videoItems}
         </ul>
     )
