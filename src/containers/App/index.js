@@ -5,7 +5,7 @@ import VideoItemList from '../../components/VideoItemList'
 import VideoDetail from '../../components/VideoDetail'
 
 // If you don't have api key, going to http://console.developers.google.com
-const API_KEY = 'AIzaSyDO3RA5fGGI-781qhBqtW4xeq8Sy0AM8GQ'
+const API_KEY = ''
 
 class App extends Component {
   constructor(props) {
