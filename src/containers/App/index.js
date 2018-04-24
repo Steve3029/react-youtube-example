@@ -5,7 +5,7 @@ import VideoItemList from '../../components/VideoItemList'
 import VideoDetail from '../../components/VideoDetail'
 
 // If you don't have api key, going to http://console.developers.google.com
-const API_KEY = ''
+const API_KEY = 'AIzaSyDO3RA5fGGI-781qhBqtW4xeq8Sy0AM8GQ'
 
 class App extends Component {
   constructor(props) {
@@ -15,7 +15,11 @@ class App extends Component {
       selectedVideo: null
     }
 
-    YTSearch({key: API_KEY, term: 'urban dance'}, videos => {
+    this.videoSearch('urban dance')
+  }
+
+  videoSearch (term) {
+    YTSearch({key: API_KEY, term: term}, videos => {
       this.setState({ 
         videos:videos,
         selectedVideo: videos[0]
@@ -26,7 +30,7 @@ class App extends Component {
   render () {
     return (
       <div className="container">
-        <SearchBar />
+        <SearchBar onSearchTermChange={term => {this.videoSearch(term)}} />
         <div className="row">
           <VideoDetail video={this.state.selectedVideo} />
           <VideoItemList 
