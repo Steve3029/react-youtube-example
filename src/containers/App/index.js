@@ -4,6 +4,7 @@ import SearchBar from '../SearchBar'
 import VideoItemList from '../../components/VideoItemList'
 import VideoDetail from '../../components/VideoDetail'
 
+// If you don't have api key, go to http://console.developers.google.com
 const API_KEY = ''
 
 class App extends Component {
@@ -23,7 +24,6 @@ class App extends Component {
   }
 
   render () {
-    console.log(this.state.videos)
     return (
       <div>
         <SearchBar />
