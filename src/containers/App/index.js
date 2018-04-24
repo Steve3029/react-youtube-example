@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import React, { Component } from 'react'
 import YTSearch from 'youtube-api-search'
 import SearchBar from '../SearchBar'
@@ -5,7 +6,7 @@ import VideoItemList from '../../components/VideoItemList'
 import VideoDetail from '../../components/VideoDetail'
 
 // If you don't have api key, going to http://console.developers.google.com
-const API_KEY = ''
+const API_KEY = 'AIzaSyDO3RA5fGGI-781qhBqtW4xeq8Sy0AM8GQ'
 
 class App extends Component {
   constructor(props) {
@@ -28,9 +29,10 @@ class App extends Component {
   }
 
   render () {
+    const throttledVideoSearch = _.debounce(term => { this.videoSearch(term) }, 300)
     return (
       <div className="container">
-        <SearchBar onSearchTermChange={term => {this.videoSearch(term)}} />
+        <SearchBar onSearchTermChange={throttledVideoSearch} />
         <div className="row">
           <VideoDetail video={this.state.selectedVideo} />
           <VideoItemList 
